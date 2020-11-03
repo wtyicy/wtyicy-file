@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.wtyicy</groupId>
+    <artifactId>wtyicy-file</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.2.RELEASE</version>
+        <relativePath />
+    </parent>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <aliyun-sdk-oss.version>3.11.0</aliyun-sdk-oss.version>
+        <hutool.version>5.4.2</hutool.version>
+        <fastjson.version>1.2.73</fastjson.version>
+        <qiniu-java-sdk.version>7.2.29</qiniu-java-sdk.version>
+        <fastdfs.version>1.27.2</fastdfs.version>
+        <qcloud.version>5.6.24</qcloud.version>
+        <baiducos.version>0.10.135</baiducos.version>
+        <huaweiob.version>3.20.6.1</huaweiob.version>
+        <jindongyuns3.version>1.11.885</jindongyuns3.version>
+    </properties>
+
+    <dependencies>
+        <!-- SpringBoot 核心包 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!-- SpringBoot Web容器 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+
+        <!-- aliyun-sdk-oss -->
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>${aliyun-sdk-oss.version}</version>
+        </dependency>
+
+        <!-- 工具类 -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <scope>provided</scope>
+            <version>${hutool.version}</version>
+        </dependency>
+
+        <!-- qiniu-java-sdk -->
+        <dependency>
+            <groupId>com.qiniu</groupId>
+            <artifactId>qiniu-java-sdk</artifactId>
+            <version>${qiniu-java-sdk.version}</version>
+        </dependency>
+
+        <!-- fastdfs-java-sdk -->
+        <dependency>
+            <groupId>com.github.tobato</groupId>
+            <artifactId>fastdfs-client</artifactId>
+            <version>${fastdfs.version}</version>
+        </dependency>
+
+        <!-- qcloud-java-sdk -->
+        <dependency>
+            <groupId>com.qcloud</groupId>
+            <artifactId>cos_api</artifactId>
+            <version>${qcloud.version}</version>
+        </dependency>
+
+        <!-- baidu-java-sdk -->
+        <dependency>
+            <groupId>com.baidubce</groupId>
+            <artifactId>bce-java-sdk</artifactId>
+            <version>${baiducos.version}</version>
+        </dependency>
+
+        <!-- huawei-obs-java -->
+        <dependency>
+            <groupId>com.huaweicloud</groupId>
+            <artifactId>esdk-obs-java</artifactId>
+            <version>${huaweiob.version}</version>
+        </dependency>
+
+        <!-- jingdong-java-sdk-s3 -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-s3</artifactId>
+            <version>${jindongyuns3.version}</version>
+        </dependency>
+
+
+
+
+    </dependencies>
+
+    <build>
+        <finalName>wtyicy-file</finalName>
+    </build>
+
+</project>
