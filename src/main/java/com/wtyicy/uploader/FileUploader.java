@@ -9,7 +9,7 @@ import java.io.InputStream;
 /**
  *
  * @author wtyicy
- * @date 2019/2/11 13:29
+ *  2019/2/11 13:29
  */
 public interface FileUploader {
 
@@ -20,6 +20,7 @@ public interface FileUploader {
      * @param uploadType 文件上传类型，用来区分文件
      * @param suffix     文件后缀
      * @param save       是否保存
+     * @return VirtualFile
      */
     VirtualFile upload(InputStream file, String uploadType, String suffix, boolean save);
 
@@ -29,6 +30,7 @@ public interface FileUploader {
      * @param file       待上传的文件
      * @param uploadType 文件上传类型，用来区分文件
      * @param save       是否保存
+     * @return VirtualFile
      */
     VirtualFile upload(File file, String uploadType, boolean save);
 
@@ -38,6 +40,7 @@ public interface FileUploader {
      * @param file       待上传的文件
      * @param uploadType 文件上传类型，用来区分文件
      * @param save       是否保存
+     *  @return VirtualFile
      */
     VirtualFile upload(MultipartFile file, String uploadType, boolean save);
 
@@ -46,6 +49,7 @@ public interface FileUploader {
      *
      * @param filePath   文件路径
      * @param uploadType 文件类型
+     * @return VirtualFile
      */
     boolean delete(String filePath, String uploadType);
 }

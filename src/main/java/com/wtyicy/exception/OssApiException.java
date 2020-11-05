@@ -3,7 +3,7 @@ package com.wtyicy.exception;
 /**
  * aliyun oss 异常处理
  * @author wtyicy
- * @date 2020-10-14 10:29
+ *  2020-10-14 10:29
  */
 public class OssApiException extends GlobalFileException {
 

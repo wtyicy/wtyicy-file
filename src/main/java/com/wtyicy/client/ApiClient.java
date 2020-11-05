@@ -8,7 +8,7 @@ import java.io.InputStream;
 
 /**
  * @author wtyicy
- *
+ * @date 2020-11-05
  */
 public interface ApiClient {
 

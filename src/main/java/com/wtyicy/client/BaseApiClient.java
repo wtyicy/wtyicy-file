@@ -20,7 +20,7 @@ import java.util.Date;
 
 /**
  * @author wtyicy
- * @date 2019/2/12 16:19
+ *  2019/2/12 16:19
  */
 public abstract class BaseApiClient implements ApiClient {
 

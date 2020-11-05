@@ -9,17 +9,18 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- * @Description MultipartFile转fie
- * @Author wtyicy
- * @Date 2019/6/19 13:48
+ * @author wtyicy
+ *  2019/6/19 13:48
  **/
 public class MultipartFileToFile {
 
     /**
      * MultipartFile 转 File
      *
-     * @param file
-     * @throws Exception
+     * @param file 232
+     * @throws Exception  2323
+     *
+     * @return 223
      */
     public static File multipartFileToFile(MultipartFile file) throws Exception {
 
@@ -57,7 +58,7 @@ public class MultipartFileToFile {
     /**
      * 删除本地临时文件
      *
-     * @param file
+     * @param file 32
      */
     public static void delteTempFile(File file) {
         if (file != null) {

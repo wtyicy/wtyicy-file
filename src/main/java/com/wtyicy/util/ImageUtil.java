@@ -12,15 +12,15 @@ import java.io.*;
  * 操作图片工具类
  *
  * @author wtyicy
- * @date 2018/4/18 11:48
+ *  2018/4/18 11:48
  */
 public class ImageUtil {
 
     /**
      * 获取图片信息
      *
-     * @param file
-     * @throws IOException
+     * @param file 3222
+     * @return sds
      */
     public static VirtualFile getInfo(File file) {
         if (null == file) {
@@ -40,8 +40,8 @@ public class ImageUtil {
     /**
      * 获取图片信息
      *
-     * @param multipartFile
-     * @throws IOException
+     * @param multipartFile  22
+     * @return ss
      */
     public static VirtualFile getInfo(MultipartFile multipartFile) {
         if (null == multipartFile) {
@@ -61,8 +61,8 @@ public class ImageUtil {
     /**
      * 获取图片信息
      *
-     * @param inputStream
-     * @throws IOException
+     * @param inputStream wew
+     * @return 232
      */
     public static VirtualFile getInfo(InputStream inputStream) {
         try (BufferedInputStream in = new BufferedInputStream(inputStream)) {

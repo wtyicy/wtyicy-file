@@ -21,7 +21,7 @@ import java.util.Date;
  * 腾讯云云操作文件的api：v1
  *
  * @author wtyicy
- * @date 2018/4/16 16:26
+ *  2018/4/16 16:26
  */
 public class QCloudCOSApiClient extends BaseApiClient {
 

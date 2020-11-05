@@ -5,7 +5,7 @@ import com.aliyun.oss.model.CannedAccessControlList;
 /**
  * 设置OSS权限
  * @author wtyicy
- * @date 2020-10-14 09:43
+ *  2020-10-14 09:43
  */
 public class BucketEntity extends AbstractEntity {
 

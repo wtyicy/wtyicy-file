@@ -9,7 +9,7 @@ import java.util.Arrays;
  * 文件操作工具类
  *
  * @author wtyicy
- * @date 2020/11/01 17:40
+ *  2020/11/01 17:40
  */
 public class FileUtil extends cn.hutool.core.io.FileUtil {
 

@@ -42,6 +42,7 @@ public class BaiDuYunBOSApi {
      *
      * @param fileName   BOS中保存的文件名
      * @param bucketName 存储空间
+     * @return 是否存在
      */
     public boolean isExistFile(String fileName, String bucketName) {
         try {
@@ -57,6 +58,7 @@ public class BaiDuYunBOSApi {
      * @param bucketName 存储空间名
      * @param request    查询条件
      * @return 文件列表
+     *
      */
     public List<BosObjectSummary> listFile(String bucketName, ObjectsRequestEntity request) {
         try {
@@ -93,9 +95,12 @@ public class BaiDuYunBOSApi {
     }
     
     /**
+     * 文件方式上传
+     *
      * @param localFile 待上传的文件
      * @param fileName  文件名:最终保存到云端的文件名
      * @param bucket    需要上传到的目标bucket
+     * @return
      */
     public String uploadFile(File localFile, String fileName, String bucket) {
         try {
@@ -109,9 +114,12 @@ public class BaiDuYunBOSApi {
     }
 
     /**
+     * 文件流方式上传
+     *
      * @param inputStream 待上传的文件流
      * @param fileName    文件名:最终保存到云端的文件名
      * @param bucketName  需要上传到的目标bucket
+     *@return 文件标签
      */
     public String uploadFile(InputStream inputStream, String fileName, String bucketName) {
         try {

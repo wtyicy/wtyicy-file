@@ -50,6 +50,7 @@ public class AliYunOSSApi {
      * @param fileName       待授权的文件名
      * @param bucketName     存储空间
      * @param expirationTime 授权失效时间，单位秒
+     * @return Response
      */
     public String authFile(String fileName, String bucketName, long expirationTime) {
         try {
@@ -74,6 +75,7 @@ public class AliYunOSSApi {
      *
      * @param fileName   OSS中保存的文件名
      * @param bucketName 存储空间
+     * @return boolean
      */
     public boolean isExistFile(String fileName, String bucketName) {
         try {
@@ -297,6 +299,7 @@ public class AliYunOSSApi {
      * 清空Referer白名单
      *
      * @param bucketName 存储空间名
+     *
      */
     public void removeReferers(String bucketName) {
         try {
@@ -315,6 +318,7 @@ public class AliYunOSSApi {
      * 获取Referer白名单
      *
      * @param bucketName 存储空间名
+     * @return string
      */
     public List<String> getReferers(String bucketName) {
         try {
@@ -332,6 +336,7 @@ public class AliYunOSSApi {
      * @param localFile 待上传的文件
      * @param fileName  文件名:最终保存到云端的文件名
      * @param bucket    需要上传到的目标bucket
+     * @return string
      */
     public String uploadFile(File localFile, String fileName, String bucket) {
         try {
@@ -348,6 +353,7 @@ public class AliYunOSSApi {
      * @param inputStream 待上传的文件流
      * @param fileName    文件名:最终保存到云端的文件名
      * @param bucketName  需要上传到的目标bucket
+     * @return string
      */
     public String uploadFile(InputStream inputStream, String fileName, String bucketName) {
         try {

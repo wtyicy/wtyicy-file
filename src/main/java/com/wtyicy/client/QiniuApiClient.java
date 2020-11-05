@@ -27,7 +27,6 @@ import java.util.Date;
  * Qiniu云操作文件的api：v1
  *
  * @author wtyicy
- * @date 2018/4/16 16:26
  */
 public class QiniuApiClient extends BaseApiClient {
 

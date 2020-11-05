@@ -50,6 +50,8 @@ public class QiNiuYunApi {
      *
      * @param fileName   BOS中保存的文件名
      * @param bucketName 存储空间
+     * @param is 文件
+     * @return 是否存在
      */
     public boolean isExistFile(String fileName, String bucketName, InputStream is) {
         try {
@@ -106,6 +108,7 @@ public class QiNiuYunApi {
      *
      * @param bucketName 保存文件的目标bucket
      * @param fileName   BOS中保存的文件名
+     * @return Response
      */
     public Response deleteFile(String fileName, String bucketName) {
         try {
@@ -122,6 +125,8 @@ public class QiNiuYunApi {
     /**
      * @param localFile 待上传的文件
      * @param fileName  文件名:最终保存到云端的文件名
+     * @param bucketName  文件名:最终保存到云端的文件名
+     * @return Response
      */
     public Response uploadFile(File localFile, String fileName,String bucketName) {
         try {
@@ -139,6 +144,8 @@ public class QiNiuYunApi {
     /**
      * @param inputStream 待上传的文件流
      * @param fileName    文件名:最终保存到云端的文件名
+     * @param bucketName    文件名:最终保存到云端的文件名
+     * @return Response
      */
     public Response uploadFile(InputStream inputStream, String fileName,String bucketName) {
         try {

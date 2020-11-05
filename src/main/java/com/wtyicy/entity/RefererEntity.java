@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 推荐实体
  * @author wtyicy
- * @date 2020-10-14 09:43
+ *  2020-10-14 09:43
  */
 public class RefererEntity extends AbstractEntity {
 

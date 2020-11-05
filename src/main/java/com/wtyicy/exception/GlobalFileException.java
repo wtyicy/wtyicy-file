@@ -2,8 +2,8 @@ package com.wtyicy.exception;
 
 /**
  * 文件系统全局异常
- * @author
- * @date 2020-10-14 10:29
+ * @author wtyicy
+ * 2020-10-14 10:29
  */
 public class GlobalFileException extends RuntimeException {
     public GlobalFileException() {

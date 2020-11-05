@@ -8,7 +8,7 @@ import java.io.*;
 /**
  * 流处理工具类
  * @author wtyicy
- * @date 2017/7/12 10:29
+ *  2017/7/12 10:29
  */
 public class StreamUtil {
 
@@ -16,7 +16,7 @@ public class StreamUtil {
      * 将InputStream转换为字符串
      *
      * @param is InputStream
-     * @return
+     * @return 232
      */
     public static String toString(InputStream is) {
         return toString(is, "UTF-8");
@@ -26,7 +26,8 @@ public class StreamUtil {
      * 将InputStream转换为字符串
      *
      * @param is InputStream
-     * @return
+     * @param encoding 3432
+     * @return 3223
      */
     public static String toString(InputStream is, String encoding) {
         if (null == is) {
@@ -53,7 +54,7 @@ public class StreamUtil {
      * 复制InputStream
      *
      * @param is InputStream
-     * @return
+     * @return  232
      */
     public static InputStream clone(InputStream is) {
         if(null == is){

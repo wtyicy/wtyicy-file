@@ -26,7 +26,7 @@ import org.springframework.util.StringUtils;
 /**
  * 基础文件上传
  * @author wtyicy
- * @date 2020-10-14 09:43
+ *  2020-10-14 09:43
  */
 public class  BaseFileUploader {
 

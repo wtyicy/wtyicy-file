@@ -2,7 +2,7 @@ package com.wtyicy.exception;
 
 /**
  * @author wtyicy
- * @date 2018/12/5 17:15
+ *  2018/12/5 17:15
  */
 public class LocalApiException extends GlobalFileException {
     public LocalApiException() {

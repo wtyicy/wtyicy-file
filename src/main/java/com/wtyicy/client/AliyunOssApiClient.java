@@ -18,7 +18,7 @@ import java.util.Date;
 
 /**
  * @author wtyicy
- * @date 2019/2/12 15:18
+ * @date  2019/2/12 15:18
  */
 public class AliyunOssApiClient extends BaseApiClient {
 

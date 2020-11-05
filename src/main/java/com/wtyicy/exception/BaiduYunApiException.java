@@ -2,7 +2,7 @@ package com.wtyicy.exception;
 
 /**
  * @author wtyicy
- * @date 2018/12/5 17:15
+ *  @date 2020-10-14 10:29
  */
 public class BaiduYunApiException extends GlobalFileException {
     public BaiduYunApiException() {

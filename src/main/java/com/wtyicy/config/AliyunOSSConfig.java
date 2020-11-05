@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * aliyun oss 配置
  * @author wtyicy
- * @date 2020-10-14 08:43
+ *  2020-10-14 08:43
  */
 @Configuration
 public class AliyunOSSConfig {

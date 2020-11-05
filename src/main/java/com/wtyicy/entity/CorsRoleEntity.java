@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 /**
  * @author wtyicy
- * @date 2020-10-14 09:43
+ *  2020-10-14 09:43
  */
 
 public class CorsRoleEntity extends AbstractEntity {

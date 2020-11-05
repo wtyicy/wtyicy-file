@@ -2,7 +2,7 @@ package com.wtyicy.exception;
 
 /**
  * @author wtyicy
- * @date 2018/12/5 17:15
+ * 2020-10-14 10:29
  */
 public class FdfsApiException extends GlobalFileException {
     public FdfsApiException() {
