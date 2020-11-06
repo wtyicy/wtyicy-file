@@ -23,6 +23,9 @@ public class FileController {
     @Resource
     private BaseConfig baseConfig;
 
+    @Resource
+    private FileUploader fileUploader;
+
 
     @RequestMapping("file/add")
     public String add(MultipartFile[] file) {
@@ -34,8 +37,8 @@ public class FileController {
         }
         List<VirtualFile> virtualFiles = new ArrayList<>();
         for (MultipartFile multipartFile : file) {
-            FileUploader uploader = new GlobalFileUploader();
-            VirtualFile upload = uploader.upload(multipartFile, baseConfig.getFilePath(), true);
+//            FileUploader uploader = new GlobalFileUploader();
+            VirtualFile upload = fileUploader.upload(multipartFile, baseConfig.getFilePath(), true);
             virtualFiles.add(upload);
         }
         System.out.println(virtualFiles);

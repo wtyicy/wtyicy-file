@@ -3,6 +3,7 @@ package com.wtyicy.uploader;
 import com.wtyicy.client.ApiClient;
 import com.wtyicy.entity.VirtualFile;
 import com.wtyicy.exception.GlobalFileException;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -14,6 +15,7 @@ import java.io.InputStream;
  * @author wtyicy
  *  2020-10-14 09:43
  */
+@Component
 public class GlobalFileUploader extends BaseFileUploader implements FileUploader {
 
     @Override
