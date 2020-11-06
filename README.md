@@ -156,6 +156,10 @@
      @Resource
      private FileUploader fileUploader;
 
+    @Resource
+    private BaseConfig baseConfig;
+
+
      VirtualFile upload = fileUploader.upload(multipartFile, baseConfig.getFilePath(), true);
    ```
 

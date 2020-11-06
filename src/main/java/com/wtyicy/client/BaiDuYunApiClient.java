@@ -75,30 +75,20 @@ public class BaiDuYunApiClient extends BaseApiClient {
         String key = FileUtil.generateTempFileName(imageUrl);
         this.createNewFileName(key, this.pathPrefix);
         Date startTime = new Date();
-        //Zone.zone0:华东
-        //Zone.zone1:华北
-        //Zone.zone2:华南
-        //Zone.zoneNa0:北美
-        Configuration cfg = new Configuration(Region.autoRegion());
-        UploadManager uploadManager = new UploadManager(cfg);
-        try {
-            Auth auth = Auth.create(this.accessKey, this.secretKey);
-            String upToken = auth.uploadToken(this.bucket);
-            Response response = uploadManager.put(is, this.newFileName, upToken, null, null);
 
-            //解析上传成功的结果
-            DefaultPutRet putRet = JSON.parseObject(response.bodyString(), DefaultPutRet.class);
+        try {
+            baiDuYunApi.uploadFile(is, this.newFileName, bucket);
 
             return new VirtualFile()
                     .setOriginalFileName(key)
                     .setSuffix(this.suffix)
                     .setUploadStartTime(startTime)
                     .setUploadEndTime(new Date())
-                    .setFilePath(putRet.key)
-                    .setFileHash(putRet.hash)
-                    .setFullFilePath(this.path + putRet.key);
-        } catch (QiniuException ex) {
-            throw new QiniuApiException("[" + this.storageType + "]文件上传失败：" + ex.error());
+                    .setFilePath("putRet.key")
+                    .setFileHash("putRet.hash")
+                    .setFullFilePath(this.path + this.newFileName);
+        } catch (BaiduYunApiException ex) {
+            throw new BaiduYunApiException("[" + this.storageType + "]文件上传失败：" + ex.getMessage());
         }
     }
 

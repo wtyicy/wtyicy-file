@@ -13,18 +13,13 @@
     <description>The test uploads the jar to the maven central repository</description>
     <url>https://github.com/wtyicy/OSSRH-61766</url>
 
-   <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.2.RELEASE</version>
-        <relativePath />
-    </parent>
 
-<!--    <parent>-->
-<!--        <groupId>org.sonatype.oss</groupId>-->
-<!--        <artifactId>oss-parent</artifactId>-->
-<!--        <version>7</version>-->
-<!--    </parent>-->
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
 
 
 
@@ -55,14 +50,14 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-<!--            <version>2.3.2.RELEASE</version>-->
+            <version>2.3.2.RELEASE</version>
             <scope>provided</scope>
         </dependency>
         <!-- SpringBoot Web容器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-<!--            <version>2.3.2.RELEASE</version>-->
+            <version>2.3.2.RELEASE</version>
             <scope>provided</scope>
         </dependency>
 
@@ -84,7 +79,6 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <scope>provided</scope>
             <version>${hutool.version}</version>
         </dependency>
 
