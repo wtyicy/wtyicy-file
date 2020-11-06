@@ -26,7 +26,7 @@
     <dependency>
         <groupId>com.github.wtyicy</groupId>
         <artifactId>wtyicy-file</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </dependency>
    ```
    - 配置文件application.yml
