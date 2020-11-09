@@ -1,17 +1,11 @@
 package com.wtyicy.client;
 
-
-import com.alibaba.fastjson.JSON;
 import com.aliyun.oss.common.utils.StringUtils;
-import com.baidubce.services.bos.model.ObjectMetadata;
-import com.baidubce.services.bos.model.PutObjectResponse;
 import com.qiniu.common.QiniuException;
 import com.qiniu.http.Response;
 import com.qiniu.storage.BucketManager;
 import com.qiniu.storage.Configuration;
 import com.qiniu.storage.Region;
-import com.qiniu.storage.UploadManager;
-import com.qiniu.storage.model.DefaultPutRet;
 import com.qiniu.util.Auth;
 import com.wtyicy.api.BaiDuYunBOSApi;
 import com.wtyicy.config.BaseConfig;
@@ -19,7 +13,6 @@ import com.wtyicy.entity.VirtualFile;
 import com.wtyicy.exception.BaiduYunApiException;
 import com.wtyicy.exception.QiniuApiException;
 import com.wtyicy.util.FileUtil;
-import com.wtyicy.util.MultipartFileToFile;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
@@ -86,7 +79,7 @@ public class BaiDuYunApiClient extends BaseApiClient {
                     .setUploadEndTime(new Date())
                     .setFilePath("putRet.key")
                     .setFileHash("putRet.hash")
-                    .setFullFilePath(this.path + this.newFileName);
+                    .setFullFilePath(this.path +bucket+"/"+ this.newFileName);
         } catch (BaiduYunApiException ex) {
             throw new BaiduYunApiException("[" + this.storageType + "]文件上传失败：" + ex.getMessage());
         }

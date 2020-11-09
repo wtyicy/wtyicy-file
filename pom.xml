@@ -10,8 +10,8 @@
     <packaging>jar</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
-    <description>The test uploads the jar to the maven central repository</description>
-    <url>https://github.com/wtyicy/OSSRH-61766</url>
+    <description>上传文件的小组件</description>
+    <url>https://github.com/wtyicy/wtyicy-file</url>
 
 
 
@@ -144,9 +144,9 @@
     </licenses>
     <!-- SCM信息 -> git在github上托管 -->
     <scm>
-        <connection>scm:git:git://github.com/wtyicy/OSSRH-61766.git</connection>
-        <developerConnection>scm:git:ssh://github.com/wtyicy/OSSRH-61766.git</developerConnection>
-        <url>https://github.com/wtyicy/OSSRH-61766/tree/master</url>
+        <connection>scm:git:git://github.com/wtyicy/wtyicy-file.git</connection>
+        <developerConnection>scm:git:ssh://github.com/wtyicy/wtyicy-file.git</developerConnection>
+        <url>https://github.com/wtyicy/wtyicy-file/tree/master</url>
     </scm>
     <!-- 开发者信息 -->
     <developers>
