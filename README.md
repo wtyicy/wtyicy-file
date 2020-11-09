@@ -20,7 +20,10 @@
    - 集成国内数家第三方平台，实现快速接入。<a href="" target="_blank">参考文档</a>
    - 自定义 uploadFile 平台，更容易适配自有的 uploadFile 服务。<a href="" target="_blank">参考文档</a>
    - 更多...<a href="" target="_blank">参考文档</a>
-## 快速开始
+## 快速开始  
+wtyicy-file使用和测试可参考wtyicy-file-demo。
+`# git clone https://gitee.com/cyiwty/wtyicy-file-demo.git`  
+你可以启动这个Spring Boot的项目，然后访问http://localhost:8080/file/upload来上传文件。
    - 引入依赖
    ```xml
     <dependency>
