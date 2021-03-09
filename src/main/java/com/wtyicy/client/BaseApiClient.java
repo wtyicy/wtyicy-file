@@ -40,7 +40,7 @@ public abstract class BaseApiClient implements ApiClient {
         }
         try {
             VirtualFile res = new VirtualFile();
-            if (!"FastDFS存储".equals(storageType) ){
+            if (!"FastDFS存储".equals(storageType)  && !"又拍云".equals(storageType) ){
                 res = this.uploadImg(file.getInputStream(), file.getOriginalFilename());
             } else {
                 res = this.uploadFadfsImg(file);

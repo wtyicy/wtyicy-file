@@ -21,7 +21,7 @@ import java.util.List;
  * 初始化七牛云
  *
  * @author wtyicy
- * @date 2020-10-14 08:43
+ *  2020-10-14 08:43
  */
 public class QiNiuYunApi {
 

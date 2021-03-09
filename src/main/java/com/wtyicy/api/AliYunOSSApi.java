@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * 初始化阿里云 oss
  * @author wtyicy
- * @date 2020-10-14 08:43
+ *  2020-10-14 08:43
  */
 public class AliYunOSSApi {
 

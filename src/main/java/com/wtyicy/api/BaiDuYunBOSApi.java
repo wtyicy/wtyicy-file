@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * 初始化百度云BOS
  * @author wtyicy
- * @date 2020-10-14 08:43
+ *  2020-10-14 08:43
  */
 public class BaiDuYunBOSApi {
 
@@ -100,7 +100,7 @@ public class BaiDuYunBOSApi {
      * @param localFile 待上传的文件
      * @param fileName  文件名:最终保存到云端的文件名
      * @param bucket    需要上传到的目标bucket
-     * @return
+     * @return 文件地址
      */
     public String uploadFile(File localFile, String fileName, String bucket) {
         try {

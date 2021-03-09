@@ -38,17 +38,6 @@ public class SpringContextHolder implements ApplicationContextAware {
         return appContext.getBean(clazz);
     }
 
-//    /**
-//     * 通过name,以及Clazz返回指定的Bean
-//     *
-//     * @param name 22
-//     * @param clazz 22
-//     * @return t
-//     */
-//    public static <T> T getBean(String name, Class<T> clazz) {
-//        return appContext.getBean(name, clazz);
-//    }
-
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         if (appContext == null) {

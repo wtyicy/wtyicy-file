@@ -6,7 +6,7 @@
 
     <groupId>com.github.wtyicy</groupId>
     <artifactId>wtyicy-file</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <packaging>jar</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
@@ -14,15 +14,11 @@
     <url>https://github.com/wtyicy/wtyicy-file</url>
 
 
-
     <parent>
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
         <version>7</version>
     </parent>
-
-
-
 
 
     <properties>
@@ -43,6 +39,7 @@
         <baiducos.version>0.10.135</baiducos.version>
         <huaweiob.version>3.20.6.1</huaweiob.version>
         <jindongyuns3.version>1.11.885</jindongyuns3.version>
+        <youpaiyun.version>4.0.1</youpaiyun.version>
     </properties>
 
     <dependencies>
@@ -124,6 +121,11 @@
             <version>${jindongyuns3.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.upyun</groupId>
+            <artifactId>java-sdk</artifactId>
+            <version>${youpaiyun.version}</version>
+        </dependency>
 
 
 
@@ -220,23 +222,23 @@
             </plugin>
 
             <!-- 用于对所有文件进行签名 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.6</version>
-                <configuration>
-                    <executable>gpg</executable> <!-- 该参数值取决于你的gpg程序在命令行中的名称，一般是"gpg"或"gpg2" -->
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-gpg-plugin</artifactId>-->
+<!--                <version>1.6</version>-->
+<!--                <configuration>-->
+<!--                    <executable>gpg</executable> &lt;!&ndash; 该参数值取决于你的gpg程序在命令行中的名称，一般是"gpg"或"gpg2" &ndash;&gt;-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>sign-artifacts</id>-->
+<!--                        <phase>verify</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>sign</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
 
             <!-- 用于将文件阶段性发布到远程 Nexus 仓库 -->
             <plugin>

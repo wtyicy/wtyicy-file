@@ -7,8 +7,10 @@ import com.wtyicy.client.BaiDuYunApiClient;
 import com.wtyicy.client.FastDFSApiClient;
 import com.wtyicy.client.HuaWeiYunApiClient;
 import com.wtyicy.client.JingDongYunApiClient;
+import com.wtyicy.client.LocalApiClient;
 import com.wtyicy.client.QCloudCOSApiClient;
 import com.wtyicy.client.QiniuApiClient;
+import com.wtyicy.client.UpYunApiClient;
 import com.wtyicy.config.AliyunOSSConfig;
 import com.wtyicy.config.BaiDuYunConfig;
 import com.wtyicy.config.BaseConfig;
@@ -17,6 +19,7 @@ import com.wtyicy.config.HuaWeiYunConfig;
 import com.wtyicy.config.JingDongYunConfig;
 import com.wtyicy.config.QCloudCOSConfig;
 import com.wtyicy.config.QiNiuYunConfig;
+import com.wtyicy.config.UpYunConfig;
 import com.wtyicy.entity.VirtualFile;
 import com.wtyicy.exception.GlobalFileException;
 import com.wtyicy.holder.SpringContextHolder;
@@ -41,6 +44,7 @@ public class  BaseFileUploader {
         BaiDuYunConfig baiDuYunConfig = SpringContextHolder.getBean(BaiDuYunConfig.class);
         HuaWeiYunConfig huaWeiYunConfig = SpringContextHolder.getBean(HuaWeiYunConfig.class);
         JingDongYunConfig jingDongYunConfig = SpringContextHolder.getBean(JingDongYunConfig.class);
+        UpYunConfig upYunConfig = SpringContextHolder.getBean(UpYunConfig.class);
         String defaultType = baseConfig.getDefaultType();
         String storageType = null;
         if (StringUtils.isEmpty(defaultType) ) {
@@ -108,7 +112,12 @@ public class  BaseFileUploader {
                 String jingdongyunEndpoint = jingDongYunConfig.getEndpoint();
                 res = new JingDongYunApiClient().init(jingdongyunaccessKey, jingdongyunsecretKey, jingdongyunBucketName,jingdongyunBucket, jingdongyunbaseUrl,jingdongyunEndpoint, uploadType);
                 break;
-            case "youpaiyun":
+            case "upyun":
+                String path = upYunConfig.getPath();
+                String serviceName = upYunConfig.getServiceName();
+                String operatorName = upYunConfig.getOperatorName();
+                String operatorPwd = upYunConfig.getOperatorPwd();
+                res = new UpYunApiClient().init(operatorName,operatorPwd,serviceName,uploadType,path);
                 break;
             default:
                 break;
